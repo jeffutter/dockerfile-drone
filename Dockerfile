@@ -1,6 +1,6 @@
-FROM mattgruter/doubledocker
+FROM jeffutter/doubledocker
 
-MAINTAINER Matthias Grüter <matthias@grueter.name>
+MAINTAINER Jeffery Utter <jeff@jeffutter.com>
 
 RUN apt-get -y install htop
 RUN apt-get -y install wget
