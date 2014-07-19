@@ -1,4 +1,4 @@
-FROM jeffutter/doubledocker
+FROM jpetazzo/dind
 
 MAINTAINER Jeffery Utter <jeff@jeffutter.com>
 
@@ -11,5 +11,5 @@ EXPOSE 80
 
 VOLUME /var/lib/drone
 
-CMD /etc/init.d/docker start && /usr/local/bin/droned --port=:80 --datasource=/var/lib/drone/drone.sqlite
+CMD /usr/local/bin/wrapdocker && /usr/local/bin/droned --port=:80 --datasource=/var/lib/drone/drone.sqlite
 
