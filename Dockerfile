@@ -10,5 +10,5 @@ EXPOSE 80
 
 VOLUME /var/lib/drone
 
-CMD /usr/local/bin/wrapdocker && /usr/local/bin/droned --port=:80 --datasource=/var/lib/drone/drone.sqlite
+CMD /usr/local/bin/wrapdocker && /sbin/dmsetup mknodes && /usr/local/bin/droned --port=:80 --datasource=/var/lib/drone/drone.sqlite
 
