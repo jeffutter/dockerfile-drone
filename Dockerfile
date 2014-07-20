@@ -2,8 +2,7 @@ FROM jpetazzo/dind
 
 MAINTAINER Jeffery Utter <jeff@jeffutter.com>
 
-RUN apt-get -y install htop
-RUN apt-get -y install wget
+RUN apt-get -y install htop wget ssh-askpass
 RUN wget http://downloads.drone.io/latest/drone.deb
 RUN dpkg -i drone.deb
 
